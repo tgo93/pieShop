@@ -17,13 +17,14 @@
                 <tr>
                     <td colspan="4"> Here are the pies of Bethany</td>
                 </tr>
-                <% for( pie of pies ) { %>
+                <% for( product of products ) { %>
                     <tr>
-                        <td><img src="/<%= pie.image %> " alt="" width=100></td>
-                        <td><%= pie.name %> </td>
-                        <td><%= pie.description %> </td>
-                        <td><%= pie.price %> </td>
-                        <td><%= pie.details %> </td>
+                        <td><img src="/<%= product.image %> " alt="" width=100></td>
+                        <td><%= product.name %> </td>
+                        <td><%= product.description %> </td>
+                        <td><%= product.price %> </td>
+                        <td><%= product.details %> </td>
+                        <td style="padding-left: 5em"><a href="/products/pies/<%= product.name %>">View Details</a></td>
                     </tr>
                 <% } %>
             </tbody>

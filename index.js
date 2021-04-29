@@ -4,6 +4,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const app = express();
 
+const Product = require('./models/product');
+
 
 mongoose.connect('mongodb://localhost:27017/pie-shop', {
     useNewUrlParser: true,
@@ -26,15 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'images')));
 app.use(express.urlencoded({ extended: true }));
 
-const pieSchema = new mongoose.Schema({
-    image: String,
-    name: String,
-    description: String,
-    price: Number,
-    details: String
-})
-const Pie = mongoose.model('Pie', pieSchema);
-
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -44,24 +37,24 @@ app.get('/template', (req, res) => {
     res.render('template');
 });
 
-app.get('/pies/all', async (req, res) => {
-    const pies = await Pie.find({});
-    res.render('products', { pies });
+app.get('/products/all', async (req, res) => {
+    const products = await Product.find({});
+    res.render('products', { products });
 });
 
-app.get('/pies/fruit', async (req, res) => {
-    const pies = await Pie.find({ category: 'fruit' });
-    res.render('products', { pies });
+app.get('/products/fruitpies', async (req, res) => {
+    const products = await Product.find({ category: 'fruit' });
+    res.render('products', { products });
 });
 
-app.get('/pies/seasonal', async (req, res) => {
-    const pies = await Pie.find({category: 'seasonal'});
-    res.render('products', { pies });
+app.get('/products/seasonalpies', async (req, res) => {
+    const products = await Product.find({category: 'seasonal'});
+    res.render('products', { products });
 });
 
-app.get('/cheesecakes', async(req, res) => {
-    const pies = await Pie.find({category: 'cheesecake'});
-    res.render('products', { pies });
+app.get('/products/cheesecakes', async(req, res) => {
+    const products = await Product.find({category: 'cheesecake'});
+    res.render('products', { products });
 })
 
 app.listen(3000, () => {

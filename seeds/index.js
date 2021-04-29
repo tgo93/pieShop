@@ -1,5 +1,6 @@
 // DB seed file, temporary
 const mongoose = require('mongoose');
+const Product = require('../models/product');
 
 mongoose.connect('mongodb://localhost:27017/pie-shop', {
     useNewUrlParser: true,
@@ -14,15 +15,6 @@ db.once('open', () => {
     console.log('Database connected');
 });
 
-const pieSchema = new mongoose.Schema({
-    image: String,
-    name: String,
-    description: String,
-    price: Number,
-    details: String,
-    category: String
-})
-const Pie = mongoose.model('Pie', pieSchema);
 
 const seeds = [
     {
@@ -104,4 +96,4 @@ const seeds = [
     }
 ]
 
-Pie.insertMany(seeds);
+Product.insertMany(seeds);

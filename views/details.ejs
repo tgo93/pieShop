@@ -2,16 +2,7 @@
 
 <body>
 
-    <div style="width:1000px;margin-left: auto;margin-right: auto;">
-        <aside id="leftmenu">
-            <img src="images/bethanylogo.png" />
-            <header>
-                <h4 style="text-align: center;">Browse our pies</h4>
-            </header>
-            <input type="search" class="searchbox" placeholder="Search our store" />
-
-        </aside>
-        <main id="main">
+    <% include('partials/leftPanel') %> 
             <article>
                 <header>
                     <h1 style="font-size:35px;color:#a593c2">Apple pie</h1>
@@ -111,12 +102,7 @@
 
         </main>
 
-        <footer>
-            <p>Our address is
-            <address>Bethany's Pie Shop - Bakery Street 555 Brussels Belgium</address>
-            </p>
-            <small>&copy; 2020 Bethany's Pie Shop - All rights reserved</small>
-        </footer>
+        <% include('/partials/footer') %> 
     </div>
 
 </body>
