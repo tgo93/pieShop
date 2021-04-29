@@ -29,7 +29,7 @@ const seeds = [
         name: 'Apple Pie',
         description: 'Our Famous Apple Pie.',
         price: 14.95,
-        category: 'fruit'
+        category: 'fruit',
     },     
     {
         image: 'products/cranberrypiesmall.jpg',

@@ -55,7 +55,11 @@ app.get('/products/seasonalpies', async (req, res) => {
 app.get('/products/cheesecakes', async(req, res) => {
     const products = await Product.find({category: 'cheesecake'});
     res.render('products', { products });
-})
+});
+
+app.get('/promos', (req, res) => {
+    res.render('promotions');
+});
 
 app.listen(3000, () => {
     console.log('Serving on localhost via port 3000');

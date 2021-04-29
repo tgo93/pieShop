@@ -1,6 +1,6 @@
 body {
     margin-top: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: auto;
     margin-right: auto;
     background-color: #e6e4d9;
@@ -38,7 +38,7 @@ nav {
 footer {
     clear: both;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 header,
@@ -69,4 +69,82 @@ nav>ul>li a {
     padding: 16px;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Week 2 CSS styles */
+p {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+li {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-family: 'Cookie', Verdana, Arial, sans-serif;
+    font-weight: normal;
+}
+
+h4 {
+    text-align: center;
+}
+
+.promotion {
+    background-color: #23cea6;
+    color: white;
+    width: 450px;
+    text-align: center;
+    border: 10px solid #a693c2;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.promotion img {
+    width: 50%;
+}
+
+.promotion-purple {
+    background-color: #a693c2;
+    border-color: #23cea6;
+}
+
+footer {
+    padding: 60px;
+}
+
+#leftpanel-heading {
+    font-size: 24px;
+}
+
+/* #leftMenu > ul > li > ul > li > a {
+    color: red;
+} */
+
+#leftMenu a {
+    color: #199175;
+}
+
+/* Pseudo class for hover effect */
+#leftMenu a:hover {
+    color: #116552;
+}
+
+/* Pseudo class nth of type */
+tr:nth-of-type(odd) {
+    background-color: #b4ddd3;
+}
+
+tr:nth-of-type(even) {
+    background-color: #e0d7ef;
 }
